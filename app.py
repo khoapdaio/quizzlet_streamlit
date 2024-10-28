@@ -27,10 +27,10 @@ def main():
 				answer = None
 				if question.q_type == "true_false":
 					answer = st.radio(f"Trả lời câu hỏi {question.question_id}", question.options,
-					                  key = f"q{question.question_id}")
+					                  key = f"q{question.question_id}",index=None)
 				elif question.q_type == "single_choice":
 					answer = st.radio(f"Trả lời câu hỏi {question.question_id}", question.options,
-					                  key = f"q{question.question_id}")
+					                  key = f"q{question.question_id}",index=None)
 				elif question.q_type == "multi_choice":
 					answer = st.multiselect(f"Trả lời câu hỏi {question.question_id}", question.options,
 					                        key = f"q{question.question_id}")
