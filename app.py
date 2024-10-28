@@ -2,7 +2,6 @@ import streamlit as st
 import json
 from typing import List
 
-from transformers.models.tapas.tokenization_tapas import Question
 
 
 def main():
@@ -71,7 +70,7 @@ def main():
 
 
 
-def get_questions_from_json(json_quizz) -> [Question]:
+def get_questions_from_json(json_quizz) -> []:
 	data = json.loads(json_quizz)
 	questions = [
 		Question(
